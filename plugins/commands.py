@@ -73,8 +73,7 @@ Use /yplay to play all the songs of a youtube playlist.
 async def start(client, message):
     buttons = [
         [
-        InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/subin_works'),
-        InlineKeyboardButton('🧩 Source', url='https://github.com/subinps/MusicPlayer'),
+        InlineKeyboardButton('Bot by Chimon', url='https://t.me/chimon_nnnnn')
     ],
     [
         InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help'),
