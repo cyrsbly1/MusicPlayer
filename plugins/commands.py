@@ -27,44 +27,7 @@ U=USERNAME
 CHAT=Config.CHAT
 msg=Config.msg
 HOME_TEXT = "<b>Hello, [{}](tg://user?id={})\n\nI am Nezuko which plays music in Groups.\n\nI can even Stream Youtube Live in Your Voicechat."
-HELP = """
-
-<b>
-Use /play <song name> or use /play as a reply to an audio file or youtube link.
-Use /yplay to play all the songs of a youtube playlist.
-
-**Common Commands**:
-
-**/play**  Reply to an audio file or YouTube link to play it or use /play <song name>.
-**/splay** Play music from Jio Saavn, Use /splay <song name> or <code>/splay -a album name</code> to play all the songs from that album.
-**/player**  Show current playing song.
-**/upload** Uploads current playing song as audio file.
-**/help** Show help for commands
-**/playlist** Shows the playlist.
-
-**Admin Commands**:
-**/skip** [n] ...  Skip current or n where n >= 2.
-**/cplay** Play music from a channel's music files.
-**/yplay** Play music from a youtube playlist.
-**/join**  Join voice chat.
-**/leave**  Leave current voice chat
-**/shuffle** Shuffle Playlist.
-**/vc**  Check which VC is joined.
-**/stop**  Stop playing.
-**/radio** Start Radio.
-**/stopradio** Stops Radio Stream.
-**/clearplaylist** Clear the playlist.
-**/export** Export current playlist for future use.
-**/import** Import a previously exported playlist.
-**/replay**  Play from the beginning.
-**/clean** Remove unused RAW PCM files.
-**/pause** Pause playing.
-**/resume** Resume playing.
-**/volume** Change volume(0-200).
-**/mute**  Mute in VC.
-**/unmute**  Unmute in VC.
-**/restart**  Update and restarts the Bot.
-"""
+HELP = """For full help, visit https://telegra.ph/Nezuko-Music-Bot-Commands-09-07."""
 
 
 
@@ -73,10 +36,10 @@ Use /yplay to play all the songs of a youtube playlist.
 async def start(client, message):
     buttons = [
         [
-        InlineKeyboardButton('Bot by Chimon', url='https://t.me/chimon_nnnnn')
+        InlineKeyboardButton('Bot by Cy', url='https://t.me/saibuboo')
     ],
     [
-        InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help'),
+        InlineKeyboardButton('Help?', callback_data='help'),
         
     ]
     ]
@@ -91,7 +54,7 @@ async def start(client, message):
 async def show_help(client, message):
     buttons = [
         [
-        InlineKeyboardButton('Bot by Chimon', url='https://t.me/chimon_nnnnn')
+        InlineKeyboardButton('Bot by Cy!', url='https://t.me/saibuboo')
     ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
