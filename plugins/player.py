@@ -1144,7 +1144,7 @@ async def export_play_list(client, message: Message):
     file=f"{message.chat.id}_{message.message_id}.json"
     with open(file, 'w+') as outfile:
         json.dump(playlist, outfile, indent=4)
-    await client.send_document(chat_id=message.chat.id, document=file, file_name="PlayList.json", caption=f"Playlist\n\nNumber Of Songs: <code>{len(playlist)}</code>\n\nJoin [XTZ Bots](https://t.me/subin_works)")
+    await client.send_document(chat_id=message.chat.id, document=file, file_name="PlayList.json", caption=f"Playlist\n\nNumber Of Songs: <code>{len(playlist)}</code>\n\nBot by [Chimon](https://t.me/saibuboo)")
     await mp.delete(message)
     try:
         os.remove(file)
@@ -1319,7 +1319,7 @@ allcmd = ["play", "player", "splay", f"splay@{U}", f"play@{U}", f"player@{U}"] +
 async def not_chat(_, m: Message):
     buttons = [
         [
-            InlineKeyboardButton('Bot by Chimon', url='https://t.me/chimon_nnnnn'),
+            InlineKeyboardButton('Bot by Chimon', url='https://t.me/saibuboo'),
         ],
         [
             InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help')       
