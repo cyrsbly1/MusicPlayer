@@ -26,15 +26,12 @@ from config import Config
 U=USERNAME
 CHAT=Config.CHAT
 msg=Config.msg
-HOME_TEXT = "<b>Helo, [{}](tg://user?id={})\n\nIam MusicPlayer 2.0 which plays music in Channels and Groups 24*7.\n\nI can even Stream Youtube Live in Your Voicechat.\n\nDeploy Your Own bot from source code below.\n\nHit /help to know about available commands.</b>"
+HOME_TEXT = "<b>Hello, [{}](tg://user?id={})\n\nI am Nezuko which plays music in Groups.\n\nI can even Stream Youtube Live in Your Voicechat."
 HELP = """
 
 <b>
 Use /play <song name> or use /play as a reply to an audio file or youtube link.
-
 Use /yplay to play all the songs of a youtube playlist.
-
-You can also use <code>/splay song name</code> to play a song from Jio Saavn or <code>/splay -a album name</code> to play all the songs from a jiosaavn album or /cplay <channel username or channel id> to play music from a telegram channel.</b>
 
 **Common Commands**:
 
@@ -95,8 +92,8 @@ async def start(client, message):
 async def show_help(client, message):
     buttons = [
         [
-        InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/subin_works'),
-        InlineKeyboardButton('🧩 Source', url='https://github.com/subinps/MusicPlayer'),
+        InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/katarinamusicbotupdates'),
+        InlineKeyboardButton('Bot by Chimon', url='https://t.me/chimon_nnnnn'),
     ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
