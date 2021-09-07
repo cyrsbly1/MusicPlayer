@@ -31,11 +31,7 @@ HELP = """
 
 <b>
 Use /play <song name> or use /play as a reply to an audio file or youtube link.
-
 Use /yplay to play all the songs of a youtube playlist.
-
-You can also use <code>/splay song name</code> to play a song from Jio Saavn or <code>/splay -a album name</code> to play all the songs from a jiosaavn album or /cplay <channel username or channel id> to play music from a telegram channel.</b>
-
 **Common Commands**:
 
 **/play**  Reply to an audio file or YouTube link to play it or use /play <song name>.
@@ -224,8 +220,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="help":
         buttons = [
             [
-                InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/subin_works'),
-                InlineKeyboardButton('🧩 Source', url='https://github.com/subinps/MusicPlayer'),
+                InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/katarinamusicbotupdates'),
+                InlineKeyboardButton('Bot by Chimon', url='https://t.me/chimon_nnnnn'),
             ]
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
