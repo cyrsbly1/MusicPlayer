@@ -158,12 +158,12 @@ async def yplay(_, message: Message):
                 tplaylist=playlist[:25]
                 pl=f"Listing first 25 songs of total {len(playlist)} songs.\n"
                 pl += f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                    f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}"
+                    f"**{i}**. **🎸{x[1]}**"
                     for i, x in enumerate(tplaylist)
                     ])
             else:
                 pl = f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                    f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}\n"
+                    f"**{i}**. **🎸{x[1]}**\n"
                     for i, x in enumerate(playlist)
                 ])
         if EDIT_TITLE:
@@ -275,12 +275,12 @@ async def yplay(_, message: Message):
                 tplaylist=playlist[:25]
                 pl=f"Listing first 25 songs of total {len(playlist)} songs.\n"
                 pl += f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                    f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}"
+                    f"**{i}**. **🎸{x[1]}**\n"
                     for i, x in enumerate(tplaylist)
                     ])
             else:
                 pl = f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                    f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}\n"
+                    f"**{i}**. **🎸{x[1]}**\n"
                     for i, x in enumerate(playlist)
                 ])
         if EDIT_TITLE:
@@ -393,12 +393,12 @@ async def deezer(_, message):
                     tplaylist=playlist[:25]
                     pl=f"Listing first 25 songs of total {len(playlist)} songs.\n"
                     pl += f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                        f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}"
+                        f"**{i}**. **🎸{x[1]}**"
                         for i, x in enumerate(tplaylist)
                         ])
                 else:
                     pl = f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                        f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}\n"
+                        f"**{i}**. **🎸{x[1]}**"
                         for i, x in enumerate(playlist)
                     ])
             if message.chat.type == "private":
@@ -483,12 +483,12 @@ async def deezer(_, message):
                 tplaylist=playlist[:25]
                 pl=f"Listing first 25 songs of total {len(playlist)} songs.\n"
                 pl += f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                    f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}"
+                    f"**{i}**. **🎸{x[1]}**\n"
                     for i, x in enumerate(tplaylist)
                     ])
             else:
                 pl = f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                    f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}\n"
+                    f"**{i}**. **🎸{x[1]}**\n"
                     for i, x in enumerate(playlist)
                 ])
         if message.chat.type == "private":
