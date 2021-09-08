@@ -580,12 +580,12 @@ async def skip_track(_, m: Message):
                 tplaylist=playlist[:25]
                 pl=f"Listing first 25 songs of total {len(playlist)} songs.\n"
                 pl += f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                    f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}"
+                    f"**{i}**. **🎸{x[1]}**"
                     for i, x in enumerate(tplaylist)
                     ])
             else:
                 pl = f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                    f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}\n"
+                    f"**{i}**. **🎸{x[1]}**\n"
                     for i, x in enumerate(playlist)
                 ])
         if m.chat.type == "private":
@@ -619,12 +619,12 @@ async def skip_track(_, m: Message):
                     tplaylist=playlist[:25]
                     pl=f"Listing first 25 songs of total {len(playlist)} songs.\n"
                     pl += f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                        f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}"
+                        f"**{i}**. **🎸{x[1]}**"
                         for i, x in enumerate(tplaylist)
                         ])
                 else:
                     pl = f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                        f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}\n"
+                        f"**{i}**. **🎸{x[1]}**\n"
                         for i, x in enumerate(playlist)
                     ])
             if m.chat.type == "private":
@@ -838,12 +838,12 @@ async def show_playlist(_, m: Message):
             tplaylist=playlist[:25]
             pl=f"Listing first 25 songs of total {len(playlist)} songs.\n"
             pl += f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}"
+                f"**{i}**. **🎸{x[1]}**"
                 for i, x in enumerate(tplaylist)
                 ])
         else:
             pl = f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}\n"
+                f"**{i}**. **🎸{x[1]}**}\n"
                 for i, x in enumerate(playlist)
             ])
     if m.chat.type == "private":
@@ -982,12 +982,12 @@ async def yt_play_list(client, m: Message):
             tplaylist=playlist[:25]
             pl=f"Listing first 25 songs of total {len(playlist)} songs.\n"
             pl += f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}"
+                f"**{i}**. **🎸{x[1]}**"
                 for i, x in enumerate(tplaylist)
                 ])
         else:
             pl = f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}\n"
+                f"**{i}**. **🎸{x[1]}**\n"
                 for i, x in enumerate(playlist)
             ])
         if m.chat.type == "private":
@@ -1012,23 +1012,19 @@ async def yt_play_list(client, m: Message):
                 markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🤖 GetPlayListBot", url=f"https://telegram.me/GetPlaylistBot?start=subinps_{m.from_user.id}")
+                            InlineKeyboardButton("Support", url=f"https://t.me/chimon_nnnnn")
 
                         ]
                     ]
                     )
-                k=await m.reply("I was unable to fetch data for you. Plase send /start to @GetPlayListBot and try again.", reply_markup=markup)
+                k=await m.reply("I was unable to fetch data for you. Please try again.", reply_markup=markup)
                 await mp.delete(k)
                 return
             elif ytplaylist == "nosub":
                 markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("📢 Join My Update Channel", url='https://t.me/subin_works')
-                        ],
-                        [
-                            InlineKeyboardButton("🔄 Try Again", url=f"https://telegram.me/GetPlaylistBot?start=subinps_{m.from_user.id}")
-
+                            InlineKeyboardButton("📢 Join My Update Channel", url='https://t.me/saibuboo')
                         ]
                     ]
                     )
@@ -1113,12 +1109,12 @@ async def yt_play_list(client, m: Message):
                     tplaylist=playlist[:25]
                     pl=f"Listing first 25 songs of total {len(playlist)} songs.\n"
                     pl += f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                        f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}"
+                        f"**{i}**. **🎸{x[1]}**"
                         for i, x in enumerate(tplaylist)
                         ])
                 else:
                     pl = f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                        f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}\n"
+                        f"**{i}**. **🎸{x[1]}**\n"
                         for i, x in enumerate(playlist)
                     ])
                 if m.chat.type == "private":
@@ -1273,7 +1269,7 @@ async def upload(client, message):
             title=playlist[0][1],
             duration=int(float(dur)),
             performer="MusicPlayer",
-            caption=f"<b>Song: [{playlist[0][1]}]({playlist[0][2]})\nUploaded Using [MusicPlayer](https://github.com/subinps/MusicPlayer)</b>"
+            caption=f"<b>Song: [{playlist[0][1]}]({playlist[0][2]})\nUploaded by [Chimon](https://t.me/saibuboo)</b>"
             )
         await m.delete()
     else:
