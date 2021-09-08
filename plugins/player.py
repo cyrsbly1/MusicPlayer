@@ -843,7 +843,7 @@ async def show_playlist(_, m: Message):
                 ])
         else:
             pl = f"{emoji.PLAY_BUTTON} **Playlist**:\n" + "\n".join([
-                f"**{i}**. **🎸{x[1]}**\n   👤**Requested by:** {x[4]}\n"
+                f"**{i}**. **🎸{x[1]}**\n   🔗 **Requested by:** {x[4]}\n"
                 for i, x in enumerate(playlist)
             ])
     if m.chat.type == "private":
@@ -910,7 +910,7 @@ async def channel_play_list(client, m: Message):
     await mp.delete(k)
     await mp.delete(m)
 
-@Client.on_message(filters.command(["yplay", f"yplay@{U}"]) & admin_filter & (filters.chat(CHAT) | filters.private))
+@Client.on_message(filters.command(["yyyplay", f"yplay@{U}"]) & admin_filter & (filters.chat(CHAT) | filters.private))
 async def yt_play_list(client, m: Message):
     group_call = mp.group_call
     if not group_call.is_connected:
@@ -1306,7 +1306,7 @@ async def upload(client, message):
             pass
  
 
-admincmds=["join", "unmute", "yplay", "mute", "leave", "clean", "vc", "pause", "resume", "stop", "skip", "radio", "stopradio", "replay", "restart", "volume", "shuffle", "clearplaylist", "cplay", "export", "import", f"export@{U}", f"import@{U}", f"yplay@{U}" f"cplay@{U}", f"clearplaylist@{U}", f"shuffle@{U}", f"volume@{U}", f"join@{U}", f"unmute@{U}", f"mute@{U}", f"leave@{U}", f"clean@{U}", f"vc@{U}", f"pause@{U}", f"resume@{U}", f"stop@{U}", f"skip@{U}", f"radio@{U}", f"stopradio@{U}", f"replay@{U}", f"restart@{U}"]
+admincmds=["join", "unmute", "yyyplay", "mute", "leave", "clean", "vc", "pause", "resume", "stop", "skip", "radio", "stopradio", "replay", "restart", "volume", "shuffle", "clearplaylist", "cplay", "export", "import", f"export@{U}", f"import@{U}", f"yplay@{U}" f"cplay@{U}", f"clearplaylist@{U}", f"shuffle@{U}", f"volume@{U}", f"join@{U}", f"unmute@{U}", f"mute@{U}", f"leave@{U}", f"clean@{U}", f"vc@{U}", f"pause@{U}", f"resume@{U}", f"stop@{U}", f"skip@{U}", f"radio@{U}", f"stopradio@{U}", f"replay@{U}", f"restart@{U}"]
 
 @Client.on_message(filters.command(admincmds) & ~admin_filter & (filters.chat(CHAT) | filters.private))
 async def notforu(_, m: Message):
