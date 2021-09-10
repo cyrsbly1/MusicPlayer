@@ -27,7 +27,7 @@ from utils import mp, playlist
 from config import Config
 
 
-HELP = """For full help, visit https://telegra.ph/Nezuko-Music-Bot-Commands-09-07."""
+HELP = """For full help, visit https://telegra.ph/Katarina-Music-Bot-Commands-09-10."""
 
 
 
