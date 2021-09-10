@@ -26,8 +26,8 @@ from config import Config
 U=USERNAME
 CHAT=Config.CHAT
 msg=Config.msg
-HOME_TEXT = "<b>Hello, [{}](tg://user?id={})\n\nI am Nezuko which plays music in Groups.\n\nI can even Stream Youtube Live in Your Voicechat."
-HELP = """For full help, visit https://telegra.ph/Nezuko-Music-Bot-Commands-09-07."""
+HOME_TEXT = "<b>Hello, [{}](tg://user?id={})\n\nI am Katarina which plays music in Groups.\n\nI can even Stream Youtube Live in Your Voicechat."
+HELP = """For full help, visit https://telegra.ph/Katarina-Music-Bot-Commands-09-10."""
 
 
 
